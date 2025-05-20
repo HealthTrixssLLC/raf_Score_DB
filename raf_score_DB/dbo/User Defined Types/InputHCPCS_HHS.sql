@@ -1,0 +1,4 @@
+﻿CREATE TYPE [dbo].[InputHCPCS_HHS] AS TABLE (
+    [MemberID] VARCHAR (50)  NOT NULL,
+    [HCPCS]    VARCHAR (250) NULL);
+
