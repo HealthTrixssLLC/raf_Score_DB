@@ -39,15 +39,13 @@ jobs:
             exit 1
           fi
 
-      - name: Run SQL script(s) on SQL Server
+      - name: Deploy DACPAC to SQL Server
         env:
           SQL_SERVER: 135.237.13.78,1433
           SQL_DB: ramoduledev_deploy
           SQL_USER: etl_user
           SQL_PASSWORD: etl_user
         run: |
-          # Example: Run all .sql files in the sql/ directory
-          for file in $(find ./raf_score_DB/dbo -type f -name "*.sql"); do
-            /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
-              -C -N -i $file
-          done
+          # Adjust the path to your .dacpac file as needed
+          DACPAC_PATH=./raf_score_DB/bin/Debug/raf_score_DB.dacpac
+          /usr/local/bin/sqlpackage /Action:Publish /SourceFile:$DACPAC_PATH /TargetServerName:$SQL_SERVER /TargetDatabaseName:$SQL_DB /TargetUser:$SQL_USER /TargetPassword:$SQL_PASSWORD /Quiet
