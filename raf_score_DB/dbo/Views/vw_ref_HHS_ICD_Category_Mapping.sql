@@ -1,0 +1,4 @@
+﻿Create view vw_ref_HHS_ICD_Category_Mapping
+AS
+select *
+from ref_HHS_ICD_Category_Mapping
