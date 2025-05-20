@@ -1,0 +1,10 @@
+C:\GIT\raf_Score_DB\raf_score_DB\bin\Debug\raf_score_DB.dacpac
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\raf_score_DB.sqlproj.AssemblyReference.cache
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\Model.xml
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\refactor.xml
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\postdeploy.sql
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\predeploy.sql
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\raf_score_DB.dll
+C:\GIT\raf_Score_DB\raf_score_DB\obj\Debug\raf_score_DB.pdb
+C:\GIT\raf_Score_DB\raf_score_DB\bin\Debug\raf_score_DB.dll
+C:\GIT\raf_Score_DB\raf_score_DB\bin\Debug\raf_score_DB.pdb
