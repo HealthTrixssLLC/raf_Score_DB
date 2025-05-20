@@ -28,6 +28,6 @@ jobs:
           SQL_PASSWORD: etl_user
         run: |
           # Example: Run all .sql files in the sql/ directory
-          for file in $(find ./sql -type f -name "*.sql"); do
+          for file in $(find ./raf_score_DB/dbo -type f -name "*.sql"); do
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD -i $file
           done
