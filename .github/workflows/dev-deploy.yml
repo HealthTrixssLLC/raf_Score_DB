@@ -23,7 +23,7 @@ jobs:
 
       - name: Validate DB Connection
         env:
-          SQL_SERVER: 10.10.1.4,1433
+          SQL_SERVER: 10.10.1.4,8888
           SQL_DB: ramoduledev_deploy
           SQL_USER: etl_user
           SQL_PASSWORD: etl_user
