@@ -1,0 +1,33 @@
+name: Deploy to SQL Server
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install SQLCMD
+        run: |
+          curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+          sudo apt-get update
+          sudo apt-get install -y mssql-tools unixodbc-dev
+
+      - name: Run SQL script(s) on SQL Server
+        env:
+          SQL_SERVER: 10.10.1.4
+          SQL_DB: ramoduledev_deploy
+          SQL_USER: etl_user
+          SQL_PASSWORD: etl_user
+        run: |
+          # Example: Run all .sql files in the sql/ directory
+          for file in $(find ./sql -type f -name "*.sql"); do
+            /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD -i $file
+          done
