@@ -23,7 +23,7 @@ jobs:
 
       - name: Validate DB Connection
         env:
-          SQL_SERVER: 135.237.13.78,8888
+          SQL_SERVER: 135.237.13.78,1433
           SQL_DB: ramoduledev_deploy
           SQL_USER: etl_user
           SQL_PASSWORD: etl_user
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run SQL script(s) on SQL Server
         env:
-          SQL_SERVER: 135.237.13.78,8889
+          SQL_SERVER: 135.237.13.78,1433
           SQL_DB: ramoduledev_deploy
           SQL_USER: etl_user
           SQL_PASSWORD: etl_user
