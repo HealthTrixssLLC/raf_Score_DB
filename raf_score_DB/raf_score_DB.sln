@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "raf_score_DB", "raf_score_DB.sqlproj", "{FEA511A2-6279-4014-B032-0B7A0DA5D09B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA511A2-6279-4014-B032-0B7A0DA5D09B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0B17FF0-92FF-4866-9278-D48A07CF7559}
+	EndGlobalSection
+EndGlobal
