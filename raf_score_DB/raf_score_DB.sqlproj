@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>raf_score_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{fea511a2-6279-4014-b032-0b7a0da5d09b}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>raf_score_DB</RootNamespace>
+    <AssemblyName>raf_score_DB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table7_Child_Variables.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table8_Infant_Variables.sql" />
+    <Build Include="dbo\Tables\ref_HHS_Infant_Variables.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table7_8_Adult_Child_Variables.sql" />
+    <Build Include="dbo\Tables\ref_HHS_Adult_Child_Variables.sql" />
+    <Build Include="dbo\Tables\ref_HHS_ValidationMessage.sql" />
+    <Build Include="dbo\Tables\RATypeMapping.sql" />
+    <Build Include="dbo\Tables\ref_ChronicDefination_HCUP.sql" />
+    <Build Include="dbo\Tables\ref_HHS_HCC_Exclusion.sql" />
+    <Build Include="dbo\Tables\ref_HHS_Variable.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table4_HCC_Heirarchy.sql" />
+    <Build Include="dbo\Tables\ref_HHS_HCC_Heirarchy.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table2_HCPCS_CPT.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table3_HCC_Category_Mapping.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table9_HHS_Weights.sql" />
+    <Build Include="dbo\Tables\ref_HHS_Weights.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_CMSHCC_Adjustments.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_Disease_Group_Map.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_Hierarchy.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_ICD_Category_Mapping.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_Interaction_Map.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_Model_Inventory.sql" />
+    <Build Include="dbo\Tables\ref_HHS_HCPCS_CPT.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_Weights.sql" />
+    <Build Include="dbo\Tables\ref_HHS_ICD_Category_Mapping.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table10b_RXC_HCPCS.sql" />
+    <Build Include="dbo\Tables\ref_HHS_CSR_Adjustments.sql" />
+    <Build Include="dbo\Tables\ref_HHS_RXC_HCPCS.sql" />
+    <Build Include="dbo\Tables\ref_HHS_Interactions.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table10a_RXC_NDC.sql" />
+    <Build Include="dbo\Tables\ref_HHS_RXC_NDC.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table11_RXC_Heirarchy.sql" />
+    <Build Include="dbo\Tables\ref_HHS_RXC_Heirarchy.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_CMSHCC_ValidationMessage.sql" />
+    <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table6_Adult_Variables.sql" />
+    <Build Include="dbo\Tables\ref_Medicare_PartC_RAType_Mapping.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Infant_Variables.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_RATypeMapping.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_EnrolDuration_HCCCount.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Adult_Child_Variables.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Adult_Child_EnrolDuration_HCCCount.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Weights.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Disease_Interaction_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Disease_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Demographic_Interation_With_Status_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Disease_Count_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Disease_Disability_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Disease_Group_Map.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Hierarchy.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_ICD_Category_Mapping.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Interaction_Map.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Model_Inventory.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Norm_And_Coding.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_ValidationMessage.sql" />
+    <Build Include="dbo\Views\vw_ref_ChronicDefination_HCUP.sql" />
+    <Build Include="dbo\Views\vw_ref_Medicare_PartC_Demographic_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_HCPCS_CPT.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_HCC_Heirarchy.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Variable.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_ICD_Category_Mapping.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Weights.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Disease_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_Demographic_Factor.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_CSR_Adjustments.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_RXC_HCPCS.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_RXC_NDC.sql" />
+    <Build Include="dbo\Views\vw_ref_HHS_RXC_Heirarchy.sql" />
+    <Build Include="dbo\Functions\CalculateAge.sql" />
+    <Build Include="dbo\Functions\RANDBETWEEN.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_Infant_Variables.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_Adult_Child_Variables.sql" />
+    <Build Include="dbo\Stored Procedures\demo_RAFCall_HHS.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_Medicare_PartC_Validate_Membership.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_HHS.sql" />
+    <Build Include="dbo\Stored Procedures\demo_SuspectCall.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_HHS_Outer.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_HHS_Validate_Membership.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_Medicare_PartC_Suspect.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_Medicare_PartC_CMSHCC_Inner.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_Medicare_PartC_ESRD_Inner.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_Medicare_PartC_Outer.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RS_HHS_Inner.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_HCC_heirarchy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_HCPCS_CPT.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_ICD_Category_Mapping.sql" />
+    <Build Include="dbo\Stored Procedures\demo_RAFCall.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_Weights.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_RXC_HCPCS.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_RXC_NDC.sql" />
+    <Build Include="dbo\Stored Procedures\sp_transform_ref_HHS_RXC_Heirarchy.sql" />
+    <Build Include="dbo\Stored Procedures\CallFlaskApi.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosis.sql" />
+    <Build Include="dbo\User Defined Types\InputMembership_PartC.sql" />
+    <Build Include="dbo\User Defined Types\OutputMembership_PartC_Inner.sql" />
+    <Build Include="dbo\User Defined Types\OutputMembership_PartC_EngineType2.sql" />
+    <Build Include="dbo\User Defined Types\OutputMembership_PartC_EngineType1.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosisSuspect_MVP1.sql" />
+    <Build Include="dbo\User Defined Types\OutputHCCMapperSuspectInner.sql" />
+    <Build Include="dbo\User Defined Types\Validated_InputMembership_PartC.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosisSuspect.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosis_Inner.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosisRA.sql" />
+    <Build Include="dbo\User Defined Types\InputDiagnosis_HHS.sql" />
+    <Build Include="dbo\User Defined Types\InputMembership_HHS.sql" />
+    <Build Include="dbo\User Defined Types\InputNDC_HHS.sql" />
+    <Build Include="dbo\User Defined Types\InputHCPCS_HHS.sql" />
+    <Build Include="dbo\User Defined Types\Validated_InputMembership_HHS.sql" />
+    <Build Include="dbo\User Defined Types\OutputMembership_HHS.sql" />
+  </ItemGroup>
+</Project>

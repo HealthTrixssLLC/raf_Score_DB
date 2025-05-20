@@ -30,7 +30,7 @@ SELECT i.[Model]
       ,I.[source_table]
       ,I.[PaymentYear]
       ,I.[SourceFile]
-  FROM [RAModuleDev].[dbo].[ref_HHS_Interactions] i
+  FROM [dbo].[ref_HHS_Interactions] i
   
   Where   VARIABLE LIKE 'HCC_ED%'
   OR VARIABLE LIKE '%COUNT%'

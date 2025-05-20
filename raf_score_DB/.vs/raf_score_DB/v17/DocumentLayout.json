@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\GIT\\raf_Score_DB\\raf_score_DB\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FEA511A2-6279-4014-B032-0B7A0DA5D09B}|raf_score_DB.sqlproj|C:\\GIT\\raf_Score_DB\\raf_score_DB\\dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{FEA511A2-6279-4014-B032-0B7A0DA5D09B}|raf_score_DB.sqlproj|solutionrelative:dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEA511A2-6279-4014-B032-0B7A0DA5D09B}|raf_score_DB.sqlproj|C:\\GIT\\raf_Score_DB\\raf_score_DB\\dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{FEA511A2-6279-4014-B032-0B7A0DA5D09B}|raf_score_DB.sqlproj|solutionrelative:dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vw_ref_HHS_EnrolDuration_HCCCount.sql ",
+              "DocumentMoniker": "C:\\GIT\\raf_Score_DB\\raf_score_DB\\dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql",
+              "RelativeDocumentMoniker": "dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql",
+              "ToolTip": "C:\\GIT\\raf_Score_DB\\raf_score_DB\\dbo\\Views\\vw_ref_HHS_EnrolDuration_HCCCount.sql\r\n(localdb)\\ProjectModels.raf_score_DB\r\n(BUDDHAGAYA\\mayan)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-20T10:42:40.92Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
