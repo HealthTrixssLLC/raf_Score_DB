@@ -19,7 +19,23 @@ jobs:
           curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
           sudo apt-get update
           sudo apt-get install -y mssql-tools unixodbc-dev
-
+      - name: Validate DB Connection
+        env:
+          SQL_SERVER: 10.10.1.4
+          SQL_DB: ramoduledev_deploy
+          SQL_USER: etl_user
+          SQL_PASSWORD: etl_user
+        run: |
+          set -e
+          echo "Attempting to connect to SQL Server..."
+          if /opt/mssql-tools/bin/sqlcmd -S "$SQL_SERVER" -d "$SQL_DB" -U "$SQL_USER" -P "$SQL_PASSWORD" -Q "SELECT 1" > connection.log 2>&1; then
+            echo "✅ DB connection successful!"
+          else
+            echo "❌ DB connection failed!"
+            echo "--- SQLCMD ERROR LOG ---"
+            cat connection.log
+            exit 1
+          fi
       - name: Run SQL script(s) on SQL Server
         env:
           SQL_SERVER: 10.10.1.4
