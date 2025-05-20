@@ -39,21 +39,15 @@ jobs:
             exit 1
           fi
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '7.0.x' # or your required version
-
-      - name: Build SQL project
-        run: dotnet build ./raf_score_DB/raf_score_DB.sqlproj --configuration Release
-
-      # Update the DACPAC_PATH to point to Release folder
-      - name: Deploy DACPAC to SQL Server
+      - name: Deploy SQL Scripts
         env:
           SQL_SERVER: 135.237.13.78,1433
           SQL_DB: ramoduledev_deploy
           SQL_USER: etl_user
           SQL_PASSWORD: etl_user
         run: |
-          DACPAC_PATH=./raf_score_DB/bin/Release/raf_score_DB.dacpac
-          /usr/local/bin/sqlpackage /Action:Publish /SourceFile:$DACPAC_PATH /TargetServerName:$SQL_SERVER /TargetDatabaseName:$SQL_DB /TargetUser:$SQL_USER /TargetPassword:$SQL_PASSWORD /Quiet
+          # Example: Run all .sql files in the sql/ directory
+          for file in $(find ./raf_score_DB/dbo/Tables -type f -name "*.sql"); do
+            /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
+              -C -N -i $file
+          done
