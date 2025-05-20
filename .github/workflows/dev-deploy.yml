@@ -13,12 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install SQLCMD
+      - name: Install SQLCMD and SQL Server ODBC Driver
         run: |
           curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
           curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
           sudo apt-get update
-          sudo apt-get install -y mssql-tools unixodbc-dev
+          # Install Microsoft ODBC Driver for SQL Server, mssql-tools, and unixodbc-dev
+          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17 mssql-tools unixodbc-dev
 
       - name: Validate DB Connection
         env:
