@@ -50,6 +50,7 @@ jobs:
           for file in $(find ./raf_score_DB/PreDeploy -type f -name "*.sql"); do
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
+          done
           for file in $(find ./raf_score_DB/dbo/Tables -type f -name "Pre*.sql"); do
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
