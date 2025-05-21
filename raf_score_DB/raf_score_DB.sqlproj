@@ -64,6 +64,8 @@
     <Folder Include="dbo\Functions\" />
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="PreDeploy" />
+    <Folder Include="PostDeploy" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\ref_stg_HHS_cy2024diytables01072025_Table7_Child_Variables.sql" />
@@ -174,5 +176,8 @@
     <Build Include="dbo\User Defined Types\InputHCPCS_HHS.sql" />
     <Build Include="dbo\User Defined Types\Validated_InputMembership_HHS.sql" />
     <Build Include="dbo\User Defined Types\OutputMembership_HHS.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="PreDeploy\DropArtifacts.sql" />
   </ItemGroup>
 </Project>
