@@ -55,7 +55,7 @@ jobs:
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
           done
-          for file in $(find './raf_score_DB/dbo/User Defined Types' -type f -name "*.sql"); do
+          for file in $(find ./raf_score_DB/dbo/User\ Defined\ Types -type f -name "*.sql"); do
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
           done
@@ -63,7 +63,7 @@ jobs:
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
           done
-          for file in $(find './raf_score_DB/dbo/Stored Procedures' -type f -name "*.sql"); do
+          for file in $(find './raf_score_DB/dbo/Stored\ Procedures' -type f -name "*.sql"); do
             /opt/mssql-tools/bin/sqlcmd -S $SQL_SERVER -d $SQL_DB -U $SQL_USER -P $SQL_PASSWORD \
               -C -N -i $file
           done
